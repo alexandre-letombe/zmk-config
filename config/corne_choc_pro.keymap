@@ -70,7 +70,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <13 27 26 24 23 22 21 34 35 36 37 38 39 25 11 12 10 9 8 7 43 44 45>;
             flavor = "tap-preferred";
@@ -108,7 +108,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             hold-trigger-key-positions = <0 15 16 17 18 19 29 30 31 32 33 40 41 5 6 19 20 33 41 42 0 1 2 3 4 14 15 16 17 18 28 29 30 31 32>;
             hold-trigger-on-release;
             flavor = "tap-preferred";
@@ -139,6 +139,60 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI &kp DOWN_ARROW>;
             label = "DEFILE_HAUT";
+        };
+
+        e_accent_aigu: e_accent_aigu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 30>,
+                <&macro_tap_time 30>,
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp E &kp N9 &kp SPACE>;
+
+            label = "E_ACCENT_AIGU";
+        };
+
+        e_accent_grave: e_accent_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 30>,
+                <&macro_tap_time 30>,
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp E &kp N8 &kp SPACE>;
+
+            label = "E_ACCENT_GRAVE";
+        };
+
+        a_accent_grave: a_accent_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 30>,
+                <&macro_tap_time 30>,
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp E &kp KP_NUMBER_0 &kp SPACE>;
+
+            label = "A_ACCENT_GRAVE";
         };
     };
 
@@ -181,10 +235,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp F1  &kp N1          &kp N2          &kp N3          &kp N4  &kp N5     &trans      &bootloader     &kp N6     &kp N7     &kp N8    &kp N9     &kp N0  &kp DELETE
-&kp F2  &kp FR_A_GRAVE  &kp FR_E_ACUTE  &kp FR_E_GRAVE  &trans  &trans     &kp K_MUTE  &studio_unlock  &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans  &trans
-&kp F3  &kp F4          &kp F5          &kp F6          &kp F7  &kp F8                                 &kp F9     &kp F10    &kp F11   &kp F12    &trans  &trans
-                                        &kp LEFT_ALT    &trans  &kp SPACE                              &kp LSHFT  &kp LCTRL  &kp LGUI
+&kp F1  &kp N1           &kp N2          &kp N3           &kp N4  &kp N5     &trans      &bootloader     &kp N6     &kp N7     &kp N8    &kp N9     &kp N0  &kp DELETE
+&kp F2  &a_accent_grave  &e_accent_aigu  &e_accent_grave  &trans  &trans     &kp K_MUTE  &studio_unlock  &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans  &trans
+&kp F3  &kp F4           &kp F5          &kp F6           &kp F7  &kp F8                                 &kp F9     &kp F10    &kp F11   &kp F12    &trans  &trans
+                                         &kp LEFT_ALT     &trans  &kp SPACE                              &kp LSHFT  &kp LCTRL  &kp LGUI
             >;
         };
 
