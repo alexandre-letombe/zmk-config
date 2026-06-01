@@ -145,8 +145,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 30>,
-                <&macro_tap_time 30>,
+                <&macro_wait_time 15>,
+                <&macro_tap_time 15>,
                 <&macro_press>,
                 <&kp LCTRL &kp LEFT_SHIFT>,
                 <&macro_tap>,
@@ -163,8 +163,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 30>,
-                <&macro_tap_time 30>,
+                <&macro_wait_time 15>,
+                <&macro_tap_time 15>,
                 <&macro_press>,
                 <&kp LCTRL &kp LEFT_SHIFT>,
                 <&macro_tap>,
@@ -181,8 +181,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 30>,
-                <&macro_tap_time 30>,
+                <&macro_wait_time 15>,
+                <&macro_tap_time 15>,
                 <&macro_press>,
                 <&kp LCTRL &kp LEFT_SHIFT>,
                 <&macro_tap>,
@@ -190,7 +190,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHFT>,
                 <&macro_tap>,
-                <&kp E &kp KP_NUMBER_0 &kp SPACE>;
+                <&kp E &kp N0 &kp SPACE>;
 
             label = "A_ACCENT_GRAVE";
         };
