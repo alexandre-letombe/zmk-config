@@ -190,8 +190,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 15>,
-                <&macro_tap_time 15>,
+                <&macro_wait_time 0>,
+                <&macro_tap_time 0>,
                 <&macro_press>,
                 <&kp LCTRL &kp LEFT_SHIFT>,
                 <&macro_tap>,
