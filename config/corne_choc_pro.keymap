@@ -28,7 +28,7 @@
         touche_deux_points: touche_deux_points {
             compatible = "zmk,behavior-mod-morph";
             label = "TOUCHE_DEUX_POINTS";
-            bindings = <&kp COLON>, <&kp KP_DOT>;
+            bindings = <&kp DOT>, <&kp COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -59,7 +59,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             hold-trigger-key-positions = <0 15 16 17 18 19 29 30 31 32 33 40 41 5 6 19 20 33 41 42 0 1 2 3 4 14 15 16 17 18 28 29 30 31 32>;
             hold-trigger-on-release;
         };
@@ -120,7 +120,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39 43 44 45>;
         };
