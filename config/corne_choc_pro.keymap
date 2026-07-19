@@ -221,6 +221,24 @@
 
             label = "EMAJ_ACCENT_AIGU";
         };
+
+        e_chapeau: e_chapeau {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 15>,
+                <&macro_tap_time 15>,
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp E &kp A &kp SPACE>;
+
+            label = "E_CHAPEAU";
+        };
     };
 
     combos {
@@ -262,10 +280,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp F1  &kp N1  &kp N2           &kp N3           &kp N4          &kp N5             &trans      &bootloader     &kp N6     &kp N7     &kp N8    &kp N9     &kp N0  &kp DELETE
-&kp F2  &trans  &a_accent_grave  &e_accent_grave  &e_accent_aigu  &Emaj_accent_aigu  &kp K_MUTE  &studio_unlock  &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans  &trans
-&kp F3  &kp F4  &kp F5           &kp F6           &kp F7          &kp F8                                         &kp F9     &kp F10    &kp F11   &kp F12    &trans  &trans
-                                 &kp LEFT_ALT     &trans          &kp SPACE                                      &kp LSHFT  &kp LCTRL  &kp LGUI
+&kp F1  &kp N1      &kp N2           &kp N3           &kp N4          &kp N5             &trans      &bootloader     &kp N6     &kp N7     &kp N8    &kp N9     &kp N0  &kp DELETE
+&kp F2  &e_chapeau  &a_accent_grave  &e_accent_grave  &e_accent_aigu  &Emaj_accent_aigu  &kp K_MUTE  &studio_unlock  &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans  &trans
+&kp F3  &kp F4      &kp F5           &kp F6           &kp F7          &kp F8                                         &kp F9     &kp F10    &kp F11   &kp F12    &trans  &trans
+                                     &kp LEFT_ALT     &trans          &kp SPACE                                      &kp LSHFT  &kp LCTRL  &kp LGUI
             >;
         };
 
